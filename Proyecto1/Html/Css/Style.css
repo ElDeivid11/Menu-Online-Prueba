@@ -1,3 +1,5 @@
+/*Html1 Primera Pestaña*/
+
 body {
     background: linear-gradient(to bottom, black 60%, white); /* Degradado desde negro hasta blanco comenzando en el 80% */
     color: white;
@@ -6,9 +8,8 @@ body {
 .navbar {
     background: linear-gradient(to top, black, #333); /* Degradado desde negro a color de fondo del navbar */
 }
-.navbar-text {
-    color: white;
-}
+
+
 .carousel-indicators button {
     background-color: #333; /* Color de fondo para los indicadores del carrusel */
 }
@@ -44,5 +45,4 @@ h3 {
 
 
 
-/*Modo Noche*/
 
