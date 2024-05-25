@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Categorías de Comida</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Html/Css/cssS.css">
+</head>
+
+<body>
+    <div class="container-fluid mt-3">
+        <a class="btn btn-warning" href="./index.html">Volver</a>
+    </div>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Lista de Categorías de Comida</h1>
+        <div id="categorias" class="row"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const settings = {
+                async: true,
+                crossDomain: true,
+                url: 'https://www.themealdb.com/api/json/v1/1/categories.php',
+                method: 'GET'
+            };
+
+            $.ajax(settings).done(function (response) {
+                const categoriasContainer = $('#categorias');
+                response.categories.forEach(function (categoria) {
+                    const categoriaId = categoria.strCategory.replace(/\s+/g, '-').toLowerCase();
+                    const categoriaImage = `https://www.themealdb.com/images/category/${categoria.strCategory}.png`;
+                    const categoriaElement = `
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <img src="${categoriaImage}" class="card-img-top" alt="${categoria.strCategory}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${categoria.strCategory}</h5>
+                                    <a href="Session.html?categoria=${encodeURIComponent(categoria.strCategory)}" class="btn btn-primary">Ver Platos</a>
+                                </div>
+                            </div>
+                        </div>`;
+                    categoriasContainer.append(categoriaElement);
+                });
+            }).fail(function (xhr, status, error) {
+                console.error("Error al obtener la respuesta:", error);
+            });
+        });
+    </script>
+</body>
+
+</html>

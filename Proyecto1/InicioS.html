@@ -37,7 +37,9 @@
                     <h2>Bienvenido</h2>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Correo Electronico">
+                    <input type="email" class="form-control" id="email" placeholder="email">
+                    <div class="invalid-feedback" id="email-feedback" style="display: none;">
+                      Pon un correo válido "xx@xxx.com"
                 </div>
                 <div class="input-group mb-1">
                     <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Contraseña">
@@ -62,9 +64,9 @@
                 </div>
         </div>
     </div> 
-
     </div>
     </div>
+    <script src="./Html/Js/validador.js"></script>
 
 </body>
 </html>
