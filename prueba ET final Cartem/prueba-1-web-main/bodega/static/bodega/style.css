@@ -1,0 +1,225 @@
+body {
+  background: white
+}
+
+
+.colorletras{
+    color:aliceblue;
+}
+.letra-menu{
+    color:white;
+    text-decoration: none;
+    transition: .3s;
+    line-height: 3em;
+}
+.letra-menu:hover{
+    font-size: larger
+}
+.boton{
+    background-color:#A2CDB0;
+    border-radius: 10px;
+    border-color: #97d1ab;
+    border-width: 2px;
+    color: aliceblue;
+    width: 80px;
+}
+.link{
+    color:#85A389 ;
+    text-decoration:none;
+    transition: .2s;
+}
+.link:hover{
+    color: #A2CDB0;
+}
+
+.img-red{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+#carouselExampleDark ,#carouselExampleSlidesOnly{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  #carouselExampleDark , #carouselExampleSlidesOnly .carousel-item img {
+    width: auto;
+    height: auto;
+  }
+
+.warningReq{
+  color: red;
+    font-size: 15px;
+    font-weight: bold;
+} 
+.correct{
+  color: green;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.fecha{
+  color: indigo;
+  border-right-width: 5px;
+  border-right: indigo solid;
+  font-weight: bold;
+}
+.hora{
+  color: indigo;
+  border-left-width: 5px;
+  border-left: indigo solid;
+  font-weight: bold;
+}
+.money{
+  color: rgb(11, 59, 99);
+  font-weight:bolder;
+}
+
+.full-width-gif {
+  width: 100%;
+  height: auto;
+}
+
+.cardinventario{
+    width: 14rem !important;
+    margin: 20px;
+    transition: .03s;
+    background-color:ghostwhite !important;
+}
+.cardinventario:hover{
+    border: 3px indigo solid;
+}
+.boton-card{
+    background-color:white;
+    border: 2px #A2CDB0 solid;
+    color: #A2CDB0;
+    transition: .1s;
+
+}
+.boton-card:hover{
+    background-color: #A2CDB0;
+    color: white;
+}
+.imagen{
+    margin-top: 5px;
+}
+.imagen-modal{
+    width: 300px;
+    height: auto;
+    margin-left: 80px;
+}
+
+.sidebar{ /*Crea la barra laterar en sesión de usuario*/
+    height: 100%;
+    width: 20%;
+    max-width: 220px;
+    background-color: #A2CDB0;
+    position: fixed!important;/*Elemento*/
+    z-index:1; /*Establece prioridad en aparición*/
+    overflow:auto; /*Activa la barra de navegación en caso de ser necesaria*/
+}
+
+.selected{/*Destaca la página seleccionada del sidevar*/
+    background-color: aliceblue !important;
+    padding-top: 0px !important;
+    color: #A2CDB0 !important;
+}
+.usuario{ /*Atributos del enlace a usuario en sesión*/
+    width: auto;
+    border: 3px white solid;
+    padding: 2px 20px 5px;
+    align-self: center;
+}
+
+.contenido{ /*Container a la derecha del sidevar*/
+    background-color:rgb(239, 218, 255);
+    padding: 5px;
+  }
+
+    @media (max-width: 575.98px) {/*Cambia el tamaño de cotenido si la ventana es pequeña*/
+        .contenido {
+            margin-left: 20% !important;
+        }
+    }
+    @media (min-width: 576px ) { /*fija el margen con la sidebar en pantalla grande*/
+        .contenido {
+            margin-left: 220px;
+            
+        }
+    }
+    @media (min-width: 576px ) {/*fija el tamaño del sidebar en pantalla grande*/
+        .sidebar {
+            width: 220px !important;
+            
+        }
+    }
+
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+        border-style: none;
+    }
+
+    /* About Me 
+    ---------------------*/
+    .about-text h3 {
+      font-size: 45px;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+    @media (max-width: 767px) {
+      .about-text h3 {
+        font-size: 35px;
+      }
+    }
+    .about-text h6 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    @media (max-width: 767px) {
+      .about-text h6 {
+        font-size: 18px;
+      }
+    }
+    .about-text p {
+      font-size: 18px;
+      max-width: 450px;
+    }
+    
+    @media (max-width: 991px) {
+      .about-avatar {
+        margin-top: 30px;
+      }
+    }
+    
+    .about-section .counter {
+      padding: 22px 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+    }
+    .about-section .counter .count-data {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .about-section .counter .count {
+      font-weight: 700;
+      color: #20247b;
+      margin: 0 0 5px;
+    }
+    .about-section .counter p {
+      font-weight: 600;
+      margin: 0;
+    }
+    .theme-color {
+        color: #fc5356;
+    }
+    .dark-color {
+        color: #20247b;
+    }
+    
+
+    
